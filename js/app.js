@@ -1,7 +1,8 @@
 let month = window.prompt('Ingrese el mes de su cumpleaños');
+let day;
 console.log(month);
 console.log(typeof(month));
-let day = window.prompt('Ingrese el día');
+// let day = window.prompt('Ingrese el día');
 // month = month.toLowerCase();
 month = parseInt(month);
 console.log(month);
@@ -11,6 +12,7 @@ console.log(month);
 
 switch (month) {
     case 1:
+        
         if (day < 20) {
             document.write('<p>Su signo es CAPRINORNIO</p>');
             document.write('<img src="/assets/capricornio.jpg">');
@@ -20,6 +22,10 @@ switch (month) {
         }
         break;
     case 2:
+        day= window.prompt('Ingrese el día');
+        while(day > 28 || day < 1) {
+            day= window.prompt('Ingrese el día');
+        } 
         if (day < 20) {
             document.write('<p>Su signo es ACUARIO</p>');
             document.write('<img src="/assets/acuario.jpg">');
