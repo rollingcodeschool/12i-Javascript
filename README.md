@@ -1,6 +1,7 @@
-# JS-loops-zodiac-exercises
+# JAVASCRIPT
 
- ## EJERCICIOS INTRODUCTORIOS
+ ## Ejercicios Introducción
  ### CONDICIONALES, BUCLES FOR, WHILE, FUNCIONES Y ARREGLOS
+ --------
  
  
