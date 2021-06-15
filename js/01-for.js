@@ -15,21 +15,24 @@
 //     document.write(j + '<br>');
 // }
 
-//Ejercicio 04:
-// ****DONE Requerir al usuario que ingrese un número entero positivo e 
+//Ejercicio 04: Requerir al usuario que ingrese un número entero positivo e 
+
 // ****DONE imprimir todos los números correlativos entre el ingresado por el usuario y uno menos del doble del mismo.
 
 let numero;
 // numero = 5
-
+        //false        //NaN
+                    // !false
+                    // true
 do {
     numero =  window.prompt("Ingrese un valor entero positivo");
     numero = parseInt(numero);
     console.log('Inside while', numero);
 } while(numero <= 0 || !numero)
-        //false     //NaN es considerado falsy
-                    // !false
-                    // true
+        //false           //NaN  
+
+
+
 
 // ingreso x = 15
 // 12, 13, 14
@@ -39,6 +42,9 @@ let limite = (numero * 2) - 1;
 for(let i = numero; i <= limite; i++){
     document.write(i + '<br>');
 }
+
+//
+// for()
 
 
 document.write('Salio del bucle');
