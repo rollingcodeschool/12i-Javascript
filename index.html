@@ -6,23 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <style>
-        body {
-            background-color: rgb(212, 226, 231);
-
-        }
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        Hola desde el header
-    </header>
-    <h1>Signos del Zodíaco</h1>
-    <p>Ejercicios para comenzar con JS </p>
-    <a href="/pages/bucles/bucles.html">Bucles</a>
-    <a href="/pages/bucles/bucle-while.html">Bucle while</a>
-    <a href="/pages/arrays/arrays.html">Arrays</a>
-    <a href="/pages/arrays/juego-dados.html">Ejercico de dados</a>
+    <nav class="navbar navbar-expand-md navbar-light bg-warning">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="/assets//images/js.png" alt="" width="40">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              <a class="nav-link" href="/pages/bucles/bucles.html">Loops</a>
+              <a class="nav-link" href="/pages/bucles/Arrays.html">Arrays</a>
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">OPP</a>
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">DOM</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container-xl py-4 px-3">
+        <div class="row">
+          <h1 class="display-1">INTRODUCCIÓN A JAVASCRIPT</h1>
+          <h2 class="lead">Ejercicios, ejemplos para comenzar a utilizar JS</h2>
+          <hr>
+          <h2>Temas</h2>
+          <p>Páginas con los ejemplos y ejercicios que hemos ido trabajando</p>
+          <div class="col">
+            <a class="btn btn-warning" href="/pages/bucles/bucles.html">Bucles</a>
+            <a class="btn btn-warning" href="/pages/arrays/arrays.html">Arrays</a>
+            <a class="btn btn-warning" href="/pages/arrays/dice-game.html">Ejercico de dados</a>
+            <a class="btn btn-warning" href="/pages/arrays/arrays-methods.html">Métodos en los arrays</a>
+          </div>
+
+
+          <h3 class="py-3">Signos del Zodíaco</h3>
+        </div>
+      </div>
+   
     <script src="/js/app.js"></script>
 </body>
 </html>
