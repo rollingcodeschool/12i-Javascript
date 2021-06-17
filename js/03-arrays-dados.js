@@ -8,34 +8,22 @@ let jugadores = ["Carla", "María", "Juan", "Jose", "Pedro"];
 // Math.trunc((Math.random()) * 6) + 1
 
 
-//i hace referencia a las rondas de tiros
 for(let i = 0; i < 10; i++) {
-    //Hace referencia a cada jugador
-    //i = 
-   
+    // i hace referencia a las rondas de tiros
+    
     for(let j = 0; j < jugadores.length; j++) {
-        //***** i=0 *
+        // j Hace referencia a cada jugador
         if(resultados[j] == undefined) {
             console.log('Entra al if')
             resultados[j] = 0;
         }
-        //j = 1
         let dadoUno = Math.trunc((Math.random()) * 6) + 1;
         let dadoDos = Math.trunc((Math.random()) * 6) + 1;
         console.log(jugadores[j] + ' tiro dado 1: ' + dadoUno);
         console.log(jugadores[j] + ' tiro dado 2: ' + dadoDos);
         resultados[j] += dadoUno + dadoDos;
-        
         console.log('Resultados', resultados[j]);
     } 
-    
-    
-    
-    //                    5   +    3
-    // resultados.push(dadoUno + dadoDos);
-    // console.log('resultados', resultados);
-    // suma = suma + dadoUno + dadoDos;
-    // console.log('SUMA', suma);
 }    
 console.log('Resultados', resultados);            
 
