@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-warning">
         <div class="container-fluid">
           <a class="navbar-brand" href="/index.html">
-            <img src="/assets//images/js.png" alt="" width="40">
+            <img src="/assets/js.png" alt="" width="40">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,9 +20,9 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
           
-              <a class="nav-link" href="/pages/bucles/bucles.html">Loops</a>
-              <a class="nav-link" href="/pages/bucles/Arrays.html">Arrays</a>
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">OPP</a>
+              <a class="nav-link" href="/pages/loops/loops.html">Loops</a>
+              <a class="nav-link" href="/pages/arrays/arrays.html">Arrays</a>
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">OOP</a>
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">DOM</a>
             </div>
           </div>
@@ -34,12 +35,56 @@
           <hr>
           <h2>Temas</h2>
           <p>Páginas con los ejemplos y ejercicios que hemos ido trabajando</p>
+          <p>Array trabajado</p>
+          <code class="display-6 mb-3"> [ 10, 20, 30, 40, 32, 89, 54]</code>
           <div class="col">
-            <a class="btn btn-warning" href="/pages/bucles/bucles.html">Bucles</a>
 
+            <button class="btn btn-warning" onclick="arrayMap()"
+           data-bs-toggle="collapse" data-bs-target="#array-map" aria-expanded="false" aria-controls="array-map">map</button>
+
+           <button class="btn btn-warning" onclick="arrayFind()"
+           data-bs-toggle="collapse" data-bs-target="#array-find" aria-expanded="false" aria-controls="array-find">find</button>
+
+           <button class="btn btn-warning" onclick="arrayFilter()"
+           data-bs-toggle="collapse" data-bs-target="#array-filter" aria-expanded="false" aria-controls="array-filter">filter</button>
+
+           <button class="btn btn-warning" onclick="arrayFindIndex()"
+           data-bs-toggle="collapse" data-bs-target="#array-findIndex" aria-expanded="false" aria-controls="array-findIndex">findIndex</button>
+
+           <button class="btn btn-warning" onclick="arrayFill()"
+           data-bs-toggle="collapse" data-bs-target="#array-findIndex" aria-expanded="false" aria-controls="array-findIndex">findIndex</button>
+
+            <div class="collapse mt-2" id="array-map">
+                <div class="card card-body">
+                    El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+                </div>
+              </div>
+
+              <div class="collapse mt-2" id="array-filter">
+                <div class="card card-body">
+                    El método filter() crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
+                </div>
+              </div>
+
+              
+            <div class="collapse mt-2" id="array-find">
+                <div class="card card-body">
+                    El método find() devuelve el valor del primer elemento del array que cumple la función de prueba proporcionada.
+                </div>
+              </div>
+          </div>
+              
+            <div class="collapse mt-2" id="array-findIndex">
+                <div class="card card-body">
+                    El método findIndex() devuelve el índice del primer elemento de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.
+                </div>
+              </div>
           </div>
         </div>
       </div>
+
+      <p>
+     
    
     <script src="/js/03-arrays-methods.js"></script>
 </body>
