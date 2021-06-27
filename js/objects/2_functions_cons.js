@@ -2,7 +2,7 @@
 function Pokemon(name, type, powerLevel, attacks) {
     this.name = name;
     this.type = type;
-    this.powerLevel = powerLevel;
+    this.powerLevel === powerLevel;
     this.attacks = attacks;
     this.sayHello = function() {
         let dmg = this.powerLevel *1000;

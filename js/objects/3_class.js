@@ -1,6 +1,7 @@
 
 class Pokemon {
     constructor(name, type, power, attacks, price){
+        var 
         this.nombre = name;
         this.type = type;
         this.power = power;
