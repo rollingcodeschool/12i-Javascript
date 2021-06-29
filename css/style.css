@@ -1,0 +1,23 @@
+.navbar {
+    padding: 0;
+}
+
+
+a.nav-link {
+    transition: 0.3s ease-in;
+    padding: 1rem !important;
+}
+
+a.nav-link:hover {
+    background-color: #e69500;
+}
+.list-bom li {
+    list-style: none;
+    
+}
+.list-bom a {
+    text-decoration: none;
+}
+.list-bom li::before {
+    content: '- '
+}
