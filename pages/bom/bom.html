@@ -8,6 +8,7 @@
     <title>Objetos y Clases en JS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -26,16 +27,15 @@
 
                     <a class="nav-link" href="/pages/loops/loops.html">Loops</a>
                     <a class="nav-link" href="/pages/arrays/arrays.html">Arrays</a>
-                    <a class="nav-link" href="/pages/objects/objects.html" tabindex="-1" aria-disabled="true">OOP</a>
-                    <a class="nav-link" href="/pages/bom/bom.html" tabindex="-1" aria-disabled="true">BOM</a>
-                    <a class="nav-link disabled" href="/pages/dom/dom.html" tabindex="-1" aria-disabled="true">DOM</a>
+                    <a class="nav-link" href="/pages/objects/objects.html" tabindex="-1" aria-="true">OOP</a>
+                    <a class="nav-link" href="/pages/bom/bom.html" tabindex="-1" aria-="true">BOM</a>
+                    <a class="nav-link " href="/pages/dom/dom.html" tabindex="-1" aria-="true">DOM</a>
                 </div>
             </div>
         </div>
     </nav>
     <div class="container-xl pb-4 px-3">
         <div class="row">
-          
             <h1 class="display-3 text-center">
                 <strong>[ BOM ]</strong> BROWSER OBJECT MODEL
             </h1>
@@ -50,30 +50,59 @@
                                 window</strong> </li>
                         <li>Variables globales son propeiedades del objeto windows</li>
                         <li>Funciones globales son métodos de window object.</li>
-                        <li>Incluso el <strong>document object</strong> (HTML DOM) es una propiedad de window object</li>
+                        <li>Incluso el <strong>document object</strong> (HTML DOM) es una propiedad de window object
+                        </li>
                     </ul>
                 </p>
+                <p>
+                    <button class="btn btn-primary" onclick="browserDetect()">
+                        Detectar navegador
+                    </button>
+                </p>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="browser-container">
+                            <div id="browserName">
+                                <h1>
+                                    Holas
+                                </h1>
+                            </div>
+                            <div id="browserImg">
+                                Imagen
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="clock" id="clock">
+
+                        </div>
+                    </div>
+                </div>
+                
+             
             </div>
+
+
             <div class="col-sm-12 col-lg-3">
                 <h3 class="lead fw-normal">DOCUMENTACIÓN ÚTIL</h3>
                 <ul class="list-bom">
-                    <li >
+                    <li>
                         <a href="https://campus.rollingcodeschool.com/course/view.php?id=76" target="_blank">
-                        RollingCode - Campus</a>
+                            RollingCode - Campus</a>
                     </li>
                     <li class="list-bom">
                         <a href="https://www.w3schools.com/js/js_window.asp" target="_blank">
-                        W3Schools - Javascript Window</a>
+                            W3Schools - Javascript Window</a>
                     </li>
                     <li class="list-bom">
                         <a href="https://developer.mozilla.org/es/docs/Web/API/Window" target="_blank">
-                        MDN - Window</a>
+                            MDN - Window</a>
                     </li>
                 </ul>
             </div>
-           
-            
-            
+
+
+
 
             <!-- <div class="container-xl py-4 px-3">
             <div class="row">
@@ -92,7 +121,8 @@
         </div>
     </div>
 
-    <script src="/js/objects/4_extends.js"></script>
+    <script src="/js/bom/bom.js"></script>
+    <script src="/js/dom/dom.js"></script>
 </body>
 
 </html>

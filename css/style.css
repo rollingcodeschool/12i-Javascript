@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
 .navbar {
     padding: 0;
 }
@@ -11,13 +13,21 @@ a.nav-link {
 a.nav-link:hover {
     background-color: #e69500;
 }
-.list-bom li {
+.list-bom li, 
+.list-dom li {
     list-style: none;
     
 }
 .list-bom a {
     text-decoration: none;
 }
-.list-bom li::before {
+.list-bom li::before,
+.list-dom li::before {
     content: '- '
+}
+
+.clock {
+    font-family: 'Orbitron';
+    font-size: 4rem;
+    color: dodgerblue
 }

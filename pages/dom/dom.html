@@ -23,9 +23,9 @@
     
               <a class="nav-link" href="/pages/loops/loops.html">Loops</a>
               <a class="nav-link" href="/pages/arrays/arrays.html">Arrays</a>
-              <a class="nav-link" href="/pages/objects/objects.html" tabindex="-1" aria-disabled="true">OOP</a>
-              <a class="nav-link" href="/pages/bom/bom.html" tabindex="-1" aria-disabled="true">BOM</a>
-              <a class="nav-link disabled" href="/pages/dom/dom.html" tabindex="-1" aria-disabled="true">DOM</a>
+              <a class="nav-link" href="/pages/objects/objects.html" tabindex="-1" aria-="true">OOP</a>
+              <a class="nav-link" href="/pages/bom/bom.html" tabindex="-1" aria-="true">BOM</a>
+              <a class="nav-link " href="/pages/dom/dom.html" tabindex="-1" aria-="true">DOM</a>
             </div>
           </div>
         </div>
@@ -33,32 +33,29 @@
       <div class="container-xl pb-4 px-3">
         <div class="row">
           <h1 class="display-4 text-center">
-              <strong>[ BOM ]</strong> BROWSER OBJECT MODEL
+              <strong>[ DOM ]</strong> DOCUMENT OBJECT MODEL
         </h1>
-          <h2 class="lead text-center">Permite a Javascript hablar al Navegador</h2>
+          <h2 class="lead text-center">Permite a Javascript acceder a todos los elementos del HTML y modificarlos</h2>
           <hr>
-          <h2>EL OBJETO <strong>WINDOW</strong> </h2>
-          <p>
-              <ul class="list-bom">
-                  <li>Todas los objetos globales, funciones y variables se tornan miembros del <strong>objeto window</strong> </li>
-                  <li>Variables globales son propeiedades del objeto windows</li>
-                  <li>Funciones globales son métodos de window object.</li>
-                  <li>Incluso el <strong>document object</strong> (HTML DOM) es una propiedad de window object</li>
+          <h2>EL OBJETO <strong>DOCUMENT</strong> </h2>
+
+              <ul class="list-dom">
+                  <li>El objeto document se puede usar para acceder a todos los elementos del <strong>DOM</strong> </li>
+                  <li>Todos los elementos HTML son objetos, entonces tienen propiedades y métodos.</li>
+                  <li>El objeto “document” tiene métodos que te permiten seleccionar el elemento HTML deseado.</li>
+                  <!-- <li>Incluso el <strong>document object</strong> (HTML DOM) es una propiedad de window object</li> -->
               </ul>
-          </p>
-          <div class="container-xl py-4 px-3">
+
+          <div class="container-xl py-1 px-3">
             <div class="row">
-              <pre class="display-6 mb-3">
-                let user = {
-                  name: 'Jhon,
-                  lastname: 'Doe',
-                  age: 28,
-                  bornDate: '19/11/1987'
-                }
-              </pre>
-              <div class="col">
-                <button class="btn btn-warning" onclick="objectLiteral()">Object Literal</button>
-            </div>
+              <code class="mb-3 mx-5">
+              document.getElementById('id'); <br>
+              document.querySelector('#id'); <br>
+              document.getElementsByClassName('classname'); <br>
+              document.querySelector('.classname'); <br>
+              document.getElementsByTagName('tag'); <br>
+              </code>
+              
           </div>
         </div>
       </div>
