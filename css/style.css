@@ -31,3 +31,18 @@ a.nav-link:hover {
     font-size: 4rem;
     color: dodgerblue
 }
+
+.div-dom {
+    border: 1px solid orange;
+    padding: 2rem;
+}
+
+.grandparent, .parent, .children {
+    padding: 3rem;
+    border: 3px solid #222;
+    margin: 10px;
+    font-size: 1.4rem;
+    font-weight: bold.4rem;
+    color: white;
+}
+

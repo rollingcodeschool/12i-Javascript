@@ -20,7 +20,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-    
+
               <a class="nav-link" href="/pages/loops/loops.html">Loops</a>
               <a class="nav-link" href="/pages/arrays/arrays.html">Arrays</a>
               <a class="nav-link" href="/pages/objects/objects.html" tabindex="-1" aria-="true">OOP</a>
@@ -45,7 +45,6 @@
                   <li>El objeto “document” tiene métodos que te permiten seleccionar el elemento HTML deseado.</li>
                   <!-- <li>Incluso el <strong>document object</strong> (HTML DOM) es una propiedad de window object</li> -->
               </ul>
-
           <div class="container-xl py-1 px-3">
             <div class="row">
               <code class="mb-3 mx-5">
@@ -57,9 +56,37 @@
               </code>
               
           </div>
+          <div id="elemento" class="div-dom">
+            <p class="">Esto es un párrafo firsChild</p>
+            <p class="query">Esto es un párrafo query</p> <!--0--> 
+            <p class="query bg-danger text-gray"> 
+              <span>Otro nodo</span>
+              <br>
+              <strong>
+                Esto es un párrafo que quiero modificar
+              </strong>
+            </p> 
+          </div>
+
+          <p class="query">Este no quiero buscarlo</p> <!--2--> 
+          <p class="">Este no quiero buscarlo 2</p>
+          <div id="turno-jugador">
+            <button class="btn btnNew btn-primary">Boton 1</button>
+            <button class="disabled btn btn-primary">Boton 2</button>
+            <button class="btn btnNew btn-primary">Boton 3</button>
+            <button class="btn btn-primary">Boton 4</button>
+            <button class="btn btn-primary">Boton 5</button>
+          </div>
         </div>
       </div>
-    
-    <script src="/js/objects/4_extends.js"></script>
+      <div>
+        <img src="/assets/images/zodiac/aries.jpg" id="zodiac" alt="">
+      </div>
+
+
+
+
+
+    <script src="/js/dom/dom.js"></script>
 </body>
 </html>
