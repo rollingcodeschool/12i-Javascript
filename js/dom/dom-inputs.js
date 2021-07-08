@@ -17,7 +17,7 @@ formi.addEventListener("input", ( ) => {
     console.log('Entra')
 })
  
-function checkValidy() {
+function checkValidy() {git 
     if(myForm.every(el => el.checkValidity())) submitBtn.classList.remove('disabled');
 }
 
