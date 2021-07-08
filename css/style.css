@@ -46,9 +46,16 @@ a.nav-link:hover {
 
 .padre {
     background-color: rgb(19, 131, 243);
-    display: flex;}
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .hijo {
     background-color: rgb(113, 173, 233);
     flex: 1;
+}
+
+.encontrado {
+    color: red;
+    border: 3px solid red
 }
