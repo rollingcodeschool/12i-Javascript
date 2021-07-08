@@ -31,3 +31,24 @@ a.nav-link:hover {
     font-size: 4rem;
     color: dodgerblue
 }
+
+.abuelo, .padre, .hijo {
+    border: 3px solid black;
+    padding: 2rem 3rem;
+    margin: 10px;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.abuelo {
+    background-color: rgb(25, 105, 185);
+}
+
+.padre {
+    background-color: rgb(19, 131, 243);
+    display: flex;}
+
+.hijo {
+    background-color: rgb(113, 173, 233);
+    flex: 1;
+}
