@@ -61,3 +61,26 @@ setInterval(function() {
     imgRef.src = `/assets/images/zodiac/${randomNumber}.jpg`;
 }, 100)
 
+//Métodos para cambiar entre padres e hijos
+let grandparent = document.getElementById('grandparent-id');
+
+// Obtengo una HTML Collection con sus hijos directos
+// y la transformo en un array para poder usar forEach -> Array.from(parents) o [...parents]
+const parents = [...grandparent.children];
+
+//Otro método sería
+    const childrens = grandparent.querySelectorAll('.children');
+// console.log(childrens)
+
+parents.forEach(el => {
+    el.style.backgroundColor = '#333';
+});
+
+
+//// ****EXPLICAR
+// Date.prototype.hola = function() {
+//     return 'Hola desde prototype Date'
+// }
+
+// let protoDate = new Date().hola();
+// console.log(protoDate)

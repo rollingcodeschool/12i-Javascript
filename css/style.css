@@ -46,3 +46,16 @@ a.nav-link:hover {
     color: white;
 }
 
+.grandparent {
+    background-color: rgb(1, 53, 112);
+}
+.parent {
+    background-color: rgb(0, 81, 173);
+    display: flex;
+}
+
+.children {
+    background-color: rgb(0, 109, 233);
+    flex: 1;
+}
+
