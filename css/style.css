@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
-
+:root {
+    --js-bg: hsl(45, 100%, 46%);
+}
 .navbar {
     padding: 0;
 }
@@ -58,4 +60,16 @@ a.nav-link:hover {
 .encontrado {
     color: red;
     border: 3px solid red
+}
+
+.bgVerde{
+    background-color: var(--js-bg);
+}
+li{
+    text-align: start;
+}
+li:hover{
+    background: lightskyblue;
+    cursor: pointer;
+    text-decoration-line: line-through;
 }
