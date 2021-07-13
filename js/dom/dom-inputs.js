@@ -1,8 +1,10 @@
 let form = document.forms;
 let inputOne = form[0].querySelector('input');
 let formi = form["myForm"];
-console.log(form["myForm"]);
-console.log(inputOne.value)
+// console.log(form["myForm"]);
+// console.log(inputOne.value)
+
+console.log('Formitin',formi.elements);
 
 let myForm = Array.from(form["myForm"]);
 let submitBtn = document.getElementById('submit');
