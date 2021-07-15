@@ -62,12 +62,12 @@
                     <form action="saludar()" id="myForm">
                         <div class="mb-3">
                             <label for="">Nombre</label>
-                            <input type="text" name="name" class="form-control" value="pepehola" required>
+                            <input type="text" name="nombre" class="form-control" value="pepehola" required onkeyup="checkearValidez()">
                             <!-- onkeyup="checkValidy()" -->
                         </div>
                         <div class="mb-3">
                             <label for="">Apellido</label>
-                            <input type="text" name="surname" class="form-control" required minlength="5">
+                            <input type="text" name="surname" class="form-control" required minlength="5" value="Doe" >
                         </div>
                         <div class="mb-3">
                             <label for="">Email</label>
@@ -75,27 +75,58 @@
                                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                         </div>
                         <div class="mb-3">
-                            <label for="">Email</label>
-                            <input type="number" name="age" class="form-control" required value="15" min="18">
+                            <label for="">Edad</label>
+                            <input type="number" name="age" class="form-control" required min="18">
                         </div>
                         <select name="gender" id="" class="form-select w-50 mb-3">
                             <option value="female">Mujer</option>
                             <option value="male">Hombre</option>
                             <option value="none" selected>Sin definir</option>
                         </select>
-                        <a class="btn btn-success disabled" id="submit" onclick="enviarUsuario()">Crear</a>
+                        <a class="btn btn-success disabled" id="submit" onclick="saveUser()">Crear</a>
                     </form>
                 </article>
                 <article class="text-center col-6">
                     <h5 class="display-4">Lista de compras</h5>
+                    <div class="mb-3">
+                        <label for="">Buscar</label>
+                        <input type="text" name="search" class="search form-control" required>
+                    </div>
                     <p class="fw-light">Seleccione el item de la lista que desee eliminar</p>
 
                     <ul class="list-group my-5" id="listaProductos">
                     </ul>
+
+                    <div class="cube">
+                        <div class="cubeTwo">
+
+                        </div>
+                    </div>
                 </article>
 
             </div>
-            
+            <div class="modal fade" id="cambiarValor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="modal-form">
+                        <div class="mb-3">
+                          <label for="name" class="col-form-label">Recipient:</label>
+                          <input type="text" class="form-control" id="new-value">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" onclick="changeElement()">Cambiar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </section>
     </main>
 

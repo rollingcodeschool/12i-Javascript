@@ -73,3 +73,13 @@ li:hover{
     cursor: pointer;
     text-decoration-line: line-through;
 }
+.cube {
+    padding: 4rem;
+    border: 2px solid #333;
+    background-color: hsl(240, 100%, 70%);
+}
+.cubeTwo {
+    padding: 4rem;
+    border: 2px solid #333;
+    background-color: hsl(240, 90%, 60%);
+}

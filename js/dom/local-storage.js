@@ -8,6 +8,7 @@
 //Inicializo la variable arrayListaSuper
 // al colocar el condicional OR "||" si obtengo algo desde el storage lo asigno a la variable arrayListaSuper si no encuentro nada ejecuto la parte derecha del || y asigno en este caso un array vacio []
 let arrayListaSuper = JSON.parse(localStorage.getItem('items')) || [];
+let arraySupport = arrayListaSuper;
 
 let ulProductos = document.getElementById('listaProductos');
 //Pinto en el HTML los elementos invocando la función destinada a esto:
@@ -40,7 +41,7 @@ function renderizarLista() {
                        ${arrayListaSuper[item]}
                        <div>
                         <button type="button" class="btn btn-danger" onclick="borrarItem(${item})"><i class="fas fa-trash-alt"></i></button>
-                        <button type="button" class="btn btn-success" onclick="editarItem(${item})"><i class="fas fa-pencil-alt"></i></button>
+                        <button type="button" class="btn btn-success" onclick="abrirModal(${item})"><i class="fas fa-pencil-alt"></i></button>
                        </div>
                         </li>
                         
@@ -64,3 +65,49 @@ function borrarItem(index) {
     renderizarLista();
 }
 
+// BUSQUEDA EN ARRAY DE ELEMENTOS
+let search = document.querySelector('.search');
+
+search.addEventListener('keyup', function() {
+    arrayListaSuper = arraySupport;
+    //valor que ingreso en el input
+    let searchValue = search.value.toLowerCase();
+    console.log(searchValue);
+    //nuevo array a ser ingresado
+    let newArray = [];
+
+    arrayListaSuper.forEach(function(el) {
+
+        if(el.toLowerCase().includes(searchValue)) {
+            newArray.push(el);
+        }
+     
+    });
+
+
+    if(newArray.length > 0) {
+        arrayListaSuper = newArray;
+    }
+
+    renderizarLista();
+    console.log(arrayListaSuper);
+
+});
+
+
+var myModal = new bootstrap.Modal(document.getElementById('cambiarValor'), {});
+
+function abrirModal(id) {
+    console.log(myModal);
+    myModal._dialog.setAttribute('element-to-change', id);
+    myModal.show();
+}
+
+function changeElement() {
+    let newValue = document.getElementById('new-value').value;
+    let index = myModal._dialog.getAttribute('element-to-change');
+    arrayListaSuper[index] = newValue;
+    console.log(arrayListaSuper);
+    renderizarLista();
+    myModal.hide();
+}
