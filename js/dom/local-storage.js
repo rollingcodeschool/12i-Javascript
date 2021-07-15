@@ -19,6 +19,8 @@ function agregarProducto(event) {
         - La primera pregunto, si la función recive un event, y si ese event es la tecla enter "keyCode 13"
         - La otra opción será que si no recibo un evento como parámetro en la opción es por que la llame agregarProducto() sin enviar parámetro y por lo tanto ese valdrá undefined y lo dejo pasar igualmente.
     */
+   event.preventDefault();
+   console.log(event)
     if ((event && event.keyCode == 13) || event == undefined) {
         let producto = document.getElementById('productoInput').value;
         //Verificar la longitud del texto insertado en el input, en este caso que sea mayor que 3 letras
