@@ -40,15 +40,61 @@
         <section>
             <div class="bgVerde p-2 mb-5">
                 <div class="container my-4">
-                    <h1 class="display-4">Practica de localstorage</h1>
-                    <p class="lead">En este ejemplo practicaremos con un array de items almacenados en localstorage</p>
+                    <h1 class="display-3 text-white">LISTA DE COMPRAS / FORMULARIOS</h1>
+                    <p class="lead text-white">
+                        En este ejemplo practicaremos con un array de items almacenados en localstorage
+                    </p>
                 </div>
             </div>
         </section>
         <section class="container">
             <div class="row">
                 <article class="col-6">
-                    <h2 class="text-uppercase">Ingrese un producto a la lista</h2>
+                    <h2 class="text-primary">FORMULARIO</h2>
+                    <form action="saludar()" id="myForm">
+                        <div class="mb-3">
+                            <label for="">Nombre</label>
+                            <input type="text" name="nombre" class="form-control" value="pepehola" required
+                                onkeyup="checkearValidez()">
+                            <!-- onkeyup="checkValidy()" -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Apellido</label>
+                            <input type="text" name="surname" class="form-control" required minlength="5" value="Doe">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Email</label>
+                            <input type="email" name="email" class="form-control" required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        </div>
+                        <div class="mb-3 row">
+                            <div class="col-6">
+                                <label for="age">Edad</label>
+                                <input type="number" name="age" id="age" class="form-control" required min="18">
+                            </div>
+                            <div class="col-6">
+                                <label for="gender">Sexo</label>
+                                <select name="gender" id="gender" class="form-select mb-3">
+                                    <option value="female">Mujer</option>
+                                    <option value="male">Hombre</option>
+                                    <option value="none" selected>Sin definir</option>
+                                </select>
+                            </div>
+                        </div>
+                        <a class="btn btn-success disabled" id="submit" onclick="saveUser()">Crear</a>
+                    </form>
+                    <article>
+                        <div class="mb-3">
+                            <label for="datePicker" class="form-label">Email address</label>
+                            <input type="datetime-local" class="form-control w-50" id="datePicker">
+                          </div>
+                    </article>
+                </article>
+                
+                <article class="text-center col-6">
+                    <h2>LISTA DE COMPRAS</h2>
+                    <hr>
+                    <h3 class="text-uppercase text-start">Ingrese un producto a la lista</h3>
                     <div class="d-flex w-100 my-4">
                         <form action="" id="addProduct" class="me-1 w-100" onsubmit="return false">
                             <input type="text" placeholder="ej: Jabon" class="form-control me-1" id="productoInput"
@@ -57,37 +103,6 @@
                         <button class="btn btn-primary me-1" onclick="agregarProducto()">Agregar</button>
                         <button class="btn btn-danger me-1" onclick="borrarTodo()">Borrar</button>
                     </div>
-                    <hr class="my-2">
-                    <h2 class="text-primary">FORMULARIO</h2>
-                    <form action="saludar()" id="myForm">
-                        <div class="mb-3">
-                            <label for="">Nombre</label>
-                            <input type="text" name="nombre" class="form-control" value="pepehola" required onkeyup="checkearValidez()">
-                            <!-- onkeyup="checkValidy()" -->
-                        </div>
-                        <div class="mb-3">
-                            <label for="">Apellido</label>
-                            <input type="text" name="surname" class="form-control" required minlength="5" value="Doe" >
-                        </div>
-                        <div class="mb-3">
-                            <label for="">Email</label>
-                            <input type="email" name="email" class="form-control" required
-                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                        </div>
-                        <div class="mb-3">
-                            <label for="">Edad</label>
-                            <input type="number" name="age" class="form-control" required min="18">
-                        </div>
-                        <select name="gender" id="" class="form-select w-50 mb-3">
-                            <option value="female">Mujer</option>
-                            <option value="male">Hombre</option>
-                            <option value="none" selected>Sin definir</option>
-                        </select>
-                        <a class="btn btn-success disabled" id="submit" onclick="saveUser()">Crear</a>
-                    </form>
-                </article>
-                <article class="text-center col-6">
-                    <h5 class="display-4">Lista de compras</h5>
                     <div class="mb-3">
                         <label for="">Buscar</label>
                         <input type="text" name="search" class="search form-control" required>
@@ -105,37 +120,46 @@
                 </article>
 
             </div>
-            <div class="modal fade" id="cambiarValor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="cambiarValor" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <form id="modal-form">
-                        <div class="mb-3">
-                          <label for="name" class="col-form-label">Recipient:</label>
-                          <input type="text" class="form-control" id="new-value">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                      </form>
+                        <div class="modal-body">
+                            <form id="modal-form">
+                                <div class="mb-3">
+                                    <label for="name" class="col-form-label">Recipient:</label>
+                                    <input type="text" class="form-control" id="new-value">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="changeElement()">Cambiar</button>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary" onclick="changeElement()">Cambiar</button>
-                    </div>
-                  </div>
                 </div>
-              </div>
+            </div>
         </section>
     </main>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_5FNkg0Jc7ZbYEaRGu8hel");
+        })();
+    </script>
     <script src="/js/dom/local-storage.js"></script>
     <script src="/js/dom/forms.js"></script>
+    <script src="/js/dom/functions.js"></script>
+    <script src="/js/dom/date.js"></script>
+    <script src="/js/dom/email.js"></script>
 </body>
 
 </html>

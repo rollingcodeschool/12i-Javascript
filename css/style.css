@@ -83,3 +83,82 @@ li:hover{
     border: 2px solid #333;
     background-color: hsl(240, 90%, 60%);
 }
+.weather-container {
+    background-image: url('/assets/images/city.png');
+    position: relative;
+    height: 400px;
+}
+
+.weather-container::after {
+    content: '';
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 50%, rgba(0, 0, 0, 0.3) 100%) ;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+.weather-loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #424242;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.weather-loading.fadeOut {
+    visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 600ms, opacity 600ms;
+}
+
+.weather-container .weather-wrapper {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+.weather-header {
+    display: flex;
+    flex-flow: row !important;
+}
+.weather-wrapper > .row +div  {
+    flex: 1;
+    color: #fff;
+    /* background-color: #333; */
+    text-align: center;
+    text-shadow: 1px 1px #000;
+}
+.weather-temp {
+    font-size: 5rem;
+    color: #ff541e;
+    text-shadow: 3px 3px 3px rgb(58 58 58);
+    /* background: #FF8519;
+    background: -webkit-linear-gradient(to right, #FF8519 35%, #CF2917 100%);
+    background: -moz-linear-gradient(to right, #FF8519 35%, #CF2917 100%);
+    background: linear-gradient(to right, #FF8519 35%, #CF2917 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(61, 61, 61); */
+}
+.weather-temp span {
+    font-size: 3rem;
+}
+.weather-container .weather-city {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    background-color: rgba(51, 51, 51,0.5);
+    
+}
+
+.weather-container .weather-text {
+    color: #fff;
+    flex: 1;
+}
+.card-title {
+
+}

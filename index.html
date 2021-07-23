@@ -28,7 +28,7 @@
           <a class="nav-link" href="/pages/objects/objects.html" tabindex="-1" aria-="true">OOP</a>
           <a class="nav-link " href="/pages/bom/bom.html" tabindex="-1" aria-="true">BOM</a>
           <a class="nav-link " href="/pages/dom/dom.html" tabindex="-1" aria-="true">DOM</a>
-<a class="nav-link " href="/pages/dom/list.html" tabindex="-1" aria-="true">FORMS</a>
+          <a class="nav-link " href="/pages/dom/list.html" tabindex="-1" aria-="true">FORMS</a>
         </div>
       </div>
     </div>
@@ -38,23 +38,64 @@
       <h1 class="display-1">INTRODUCCIÓN A JAVASCRIPT</h1>
       <h2 class="lead">Ejercicios, ejemplos para comenzar a utilizar JS</h2>
       <hr>
-      <h2>Temas</h2>
-      <p>Páginas con los ejemplos y ejercicios que hemos ido trabajando</p>
-      <div class="col">
-        <a class="btn btn-warning" href="/pages/loops/loops.html">Bucles</a>
-        <a class="btn btn-warning" href="/pages/arrays/arrays.html">Arrays</a>
-        <a class="btn btn-warning" href="/pages/arrays/dice-game.html">Ejercico de dados</a>
-        <a class="btn btn-warning" href="/pages/arrays/arrays-methods.html">Métodos en los arrays</a>
+      <div class="col-lg-9 col-sm-12">
+        <h2>Temas</h2>
+        <p>Páginas con los ejemplos y ejercicios que hemos ido trabajando</p>
+        <div class="col">
+          <a class="btn btn-warning" href="/pages/loops/loops.html">Bucles</a>
+          <a class="btn btn-warning" href="/pages/arrays/arrays.html">Arrays</a>
+          <a class="btn btn-warning" href="/pages/arrays/dice-game.html">Ejercico de dados</a>
+          <a class="btn btn-warning" href="/pages/arrays/arrays-methods.html">Métodos en los arrays</a>
+        </div>
+        <h3 class="py-3">Signos del Zodíaco</h3>
+        <a class="btn btn-warning " href="/pages/arrays/arrays-methods.html">Ejercicio a trabajar</a>
       </div>
+      <div class="col-lg-3 col-sm-12">
+        <div class="form-group">	
+          <label for="search">Ciudad</label>
+          <input type="text" id="search" class="form-control" name="search">
+        </div>
+        <!-- <div class="form-group">
+          <label for="city">Ciudad</label>
+          <input type="text" class="form-control" name="city" id="city" placeholder="Ej: San Rafael">
+          <!-- onkeypress="console.log(event)" -->
+          <!-- <small id="helpId" class="form-text text-muted">Debe ingresar al menos 4 caractéres</small>
+        </div> --> 
 
-
-      <h3 class="py-3">Signos del Zodíaco</h3>
-
-      <a class="btn btn-warning " href="/pages/arrays/arrays-methods.html">Ejercicio a trabajar</a>
+        <div class="weather-container card">
+          <div class="weather-loading">
+            <img src="/assets/images/loading.svg" alt="">
+            Cargando...
+          </div>
+          <div class="card-body text-white p-0">
+            <div class="row p-0 weather-wrapper">
+              <div class="row p-3 g-0">
+                <div class="col-5 g-0">
+                  <img src="" id="weatherImg" class="card-img-top" alt="weather-icon">
+                </div>
+                <div class="col-7 d-flex justify-content-center align-items-lg-center">
+                  <h5 class="card-title weather-temp"></h5>
+                </div>
+              </div>
+              <div>
+                <h5 class="card-title weather-city p-3">Card title</h5>
+                <p class="card-text weather-text ">This is a wider card with supporting text below as a natural lead-in to
+                  additional </p>
+              </div>
+              <p class="card-text p-4"><small class="weather-others text-white">Last updated 3 mins ago</small></p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
     </div>
+    <h1 class="gt">
+      HOLA GRADIENT
+    </h1>
   </div>
 
-  <!-- <script src="/js/app.js"></script> -->
+  <script src="/js/async/weather.js"></script>
+  <!-- <script src="/js/async/promises.js"></script> -->
 </body>
 
 </html>
